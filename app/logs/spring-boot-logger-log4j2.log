@@ -1,0 +1,24 @@
+2023-08-21 23:39:40,792 INFO o.s.t.c.s.AnnotationConfigContextLoaderUtils [main] Could not detect default configuration classes for test class [com.demo.app.AppApplicationTests]: AppApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-08-21 23:39:40,952 INFO o.s.b.t.c.SpringBootTestContextBootstrapper [main] Found @SpringBootConfiguration com.demo.app.AppApplication for test class com.demo.app.AppApplicationTests
+2023-08-21 23:39:41,774 INFO o.s.b.StartupInfoLogger [main] Starting AppApplicationTests using Java 17.0.8 with PID 6760 (started by bangs in C:\Angshuman\Workspace\demo-app\spring-fargate-demo\app)
+2023-08-21 23:39:41,782 DEBUG o.s.b.StartupInfoLogger [main] Running with Spring Boot v3.1.2, Spring v6.0.11
+2023-08-21 23:39:41,783 INFO o.s.b.SpringApplication [main] No active profile set, falling back to 1 default profile: "default"
+2023-08-21 23:39:42,781 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-08-21 23:39:42,864 INFO o.s.d.r.c.RepositoryConfigurationDelegate [main] Finished Spring Data repository scanning in 72 ms. Found 1 JPA repository interfaces.
+2023-08-21 23:39:43,611 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2023-08-21 23:39:44,048 INFO c.z.h.p.HikariPool [main] HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:employeedb user=SA
+2023-08-21 23:39:44,051 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2023-08-21 23:39:44,131 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-08-21 23:39:44,264 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 6.2.6.Final
+2023-08-21 23:39:44,269 INFO o.h.c.Environment [main] HHH000406: Using bytecode reflection optimizer
+2023-08-21 23:39:44,648 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-08-21 23:39:44,926 INFO o.s.o.j.p.SpringPersistenceUnitInfo [main] No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-08-21 23:39:45,434 INFO o.h.b.i.BytecodeProviderInitiator [main] HHH000021: Bytecode provider name : bytebuddy
+2023-08-21 23:39:46,686 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-08-21 23:39:46,740 INFO o.s.o.j.AbstractEntityManagerFactoryBean [main] Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 23:39:47,344 WARN o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration [main] spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-08-21 23:39:48,297 INFO o.s.b.a.h.H2ConsoleAutoConfiguration [main] H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:employeedb'
+2023-08-21 23:39:48,371 INFO o.s.b.StartupInfoLogger [main] Started AppApplicationTests in 7.018 seconds (process running for 9.941)
+2023-08-21 23:39:49,298 INFO o.s.o.j.AbstractEntityManagerFactoryBean [SpringApplicationShutdownHook] Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-08-21 23:39:49,510 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown initiated...
+2023-08-21 23:39:49,520 INFO c.z.h.HikariDataSource [SpringApplicationShutdownHook] HikariPool-1 - Shutdown completed.
