@@ -2,16 +2,14 @@ package com.demo.app.controller;
 
 import com.demo.app.model.Employee;
 import com.demo.app.repository.EmployeeRepository;
+import jakarta.websocket.server.PathParam;
 import lombok.AllArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -40,6 +38,13 @@ public class RestController {
         log.info("Getting Employees ---");
         List<Employee> employeeList = employeeRepository.findAll();
         return new ResponseEntity<>(employeeList, HttpStatus.OK);
+    }
+
+    @GetMapping("/employees/{name}")
+    public ResponseEntity<Employee> getEmployeesbyName(@PathVariable("name") String name){
+        log.info("Getting Employees by name ---");
+        Employee employee = employeeRepository.findEmployeeByName(name);
+        return new ResponseEntity<>(employee, HttpStatus.OK);
     }
 
 }

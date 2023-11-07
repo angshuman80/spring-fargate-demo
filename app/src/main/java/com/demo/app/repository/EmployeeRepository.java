@@ -2,8 +2,14 @@ package com.demo.app.repository;
 
 import com.demo.app.model.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 @Repository
 public interface EmployeeRepository extends JpaRepository<Employee,Integer> {
+
+    @Query("SELECT u FROM Employee u WHERE  u.name = :name")
+    Employee findEmployeeByName(@Param("name") String name);
+
 }

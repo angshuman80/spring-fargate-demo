@@ -48,8 +48,8 @@ public class RestControllerTest {
     }
     @Test
     void testGetEmployees() {
-        Employee employee1 = new Employee(1, "Lokesh", 40, "2023-1-22");
-        Employee employee2 = new Employee(2, "Angshuman", 44,"2022-1-22");
+        Employee employee1 = new Employee("Lokesh", 40, "2023-1-22");
+        Employee employee2 = new Employee( "Angshuman", 44,"2022-1-22");
         List<Employee> list = new ArrayList<Employee>();
         list.addAll(Arrays.asList(employee1, employee2));
         when(employeeRepository.findAll()).thenReturn(list);

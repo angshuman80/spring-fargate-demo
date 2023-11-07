@@ -4,16 +4,13 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.Objects;
 
 @Getter
 @Setter
-@AllArgsConstructor
+@RequiredArgsConstructor
 @NoArgsConstructor
 @Table(name = "Employee")
 @Entity
@@ -21,8 +18,12 @@ public class Employee {
     @Id
     @GeneratedValue
     private int id;
+
+    @NonNull
     private String name;
+    @NonNull
     private Integer age;
+    @NonNull
     private String dob;
 
 
