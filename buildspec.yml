@@ -35,14 +35,14 @@ phases:
       - echo $DOCKER_CONTAINER_NAME
       - echo printing imagedefinitions.json
       - cat imagedefinitions.json
-  reports:
-    arn:aws:codebuild:us-east-1:670952628933:report-group/app-junit-report-group: #surefire junit reports
+reports:
+  app-junit-report-group: #surefire junit reports
       files:
         - '**/*'
       base-directory: 'target/surefire-reports'
       discard-paths: false
       file-format: JUNITXML
-    arn:aws:codebuild:us-east-1:670952628933:report-group/app-karate-report-group: #surefire junit reports
+  app-karate-report-group: #surefire junit reports
       files:
         - '**/*'
       base-directory: 'target/karate-reports'
