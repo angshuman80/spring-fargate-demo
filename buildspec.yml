@@ -11,7 +11,7 @@ phases:
       #- $(aws ecr get-login --region ap-south-1 --no-include-email)
       - aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 670952628933.dkr.ecr.us-east-1.amazonaws.com
       - # Replace with this to your repository URI
-      - REPOSITORY_URI=670952628933.dkr.ecr.us-east-1.amazonaws.com/app
+      - REPOSITORY_URI=670952628933.dkr.ecr.us-east-1.amazonaws.com/fargate-demo-repo
       - IMAGE_TAG=build-$(echo $CODEBUILD_BUILD_ID | awk -F":" '{print $2}')
   build:
     on-failure: ABORT
@@ -26,6 +26,8 @@ phases:
     commands:
       - echo Build completed on `date`
       - echo pushing to repo
+      - echo value of repository $REPOSITORY_URI
+      - echo value of repository $IMAGE_TAG
       - docker push $REPOSITORY_URI:latest
       - docker push $REPOSITORY_URI:$IMAGE_TAG
       - echo Writing image definitions file...
